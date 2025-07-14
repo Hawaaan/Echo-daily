@@ -16,7 +16,7 @@
 
   <!-- Navbar -->
   <header class="bg-blue-600 dark:bg-gray-800 text-white p-4 flex justify-between items-center shadow-md">
-    <h1 class="text-xl font-bold">Echo Daily</h1>
+    <img src="./images/echo-daily.png" class="h-12" alt="">
 
     <div class="flex items-center gap-4">
       <!-- Search Box -->
@@ -24,22 +24,22 @@
         <input type="text" placeholder="Search news..."
                class="px-3 py-1 rounded-md text-gray-800 focus:outline-none text-sm w-40 lg:w-64" />
       </div>
-
+      <i data-feather="search"></i>
       <!-- Dark Mode Toggle Icon -->
-      <button id="darkToggle" class="text-white focus:outline-none">
+      <button id="darkToggle" class="text-white focus:outline-none  bg-gray-200 bg-opacity-10 py-1 px-0.5 rounded">
         <i id="darkIcon" data-feather="moon"></i>
       </button>
 
       <!-- Notifications Icon -->
-      <button class="text-white focus:outline-none relative">
+      <button class="text-white focus:outline-none relative bg-gray-200 bg-opacity-10 py-1 px-0.5 rounded-e-md">
         <i data-feather="bell"></i>
         <span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs w-4 h-4 rounded-full flex items-center justify-center">3</span>
       </button>
 
       <!-- Profile Avatar -->
-      <img src="https://i.pravatar.cc/40?img=3"
+      <img src="./images/logo.jfif"
            alt="Avatar"
-           class="w-9 h-9 rounded-full border-2 border-white dark:border-gray-600 object-cover" />
+           class="w-9 h-9 rounded-fitt border-2 border-white dark:border-gray-600 object-contain" />
 
       <!-- Mobile Sidebar Toggle -->
       <button id="menu-btn" class="md:hidden block focus:outline-none">
@@ -61,7 +61,7 @@
       md:relative md:top-0 md:translate-x-0 transition duration-200 ease-in-out 
       shadow-md dark:text-white z-50">
       <nav>
-        <a href="#" class="flex items-center gap-2 py-2.5 px-4 rounded hover:bg-blue-100 dark:hover:bg-gray-700 font-semibold">
+        <a href="#wrld-news" class="flex items-center gap-2 py-2.5 px-4 rounded hover:bg-blue-100 dark:hover:bg-gray-700 font-semibold">
           <i data-feather="globe"></i> World News
         </a>
         <a href="#" class="flex items-center gap-2 py-2.5 px-4 rounded hover:bg-blue-100 dark:hover:bg-gray-700 font-semibold">
@@ -72,6 +72,13 @@
         </a>
         <a href="#" class="flex items-center gap-2 py-2.5 px-4 rounded hover:bg-blue-100 dark:hover:bg-gray-700 font-semibold">
           <i data-feather="cloud"></i> Weather
+        </a>
+        <a href="#" class="flex items-center gap-2 py-2.5 px-4 rounded hover:bg-blue-100 dark:hover:bg-gray-700 font-semibold">
+          <i data-feather="settings"></i> Settings
+        <a href="#" class="flex items-center gap-2 py-2.5 px-4 rounded hover:bg-blue-100 dark:hover:bg-gray-700 font-semibold">
+          <i data-feather="sun"></i> Brightness 
+        <a href="#" class="flex items-center gap-2 py-2.5 px-4 rounded hover:bg-blue-100 dark:hover:bg-gray-700 font-semibold">
+          <i data-feather="cast"></i> Cast
         </a>
       </nav>
     </aside>
@@ -100,6 +107,30 @@
     </main>
 
   </div>
+  <div id="wrld-news" class="max-w-4xl mx-auto p-6 bg-white rounded-2xl shadow-lg mt-10">
+  <h2 class="text-3xl font-bold mb-4 text-gray-800 border-b pb-2">🌍 World News</h2>
+  
+  <p class="text-gray-700 leading-8 text-justify">
+    The world continues to evolve at a rapid pace, with global developments affecting every corner of the planet. From political shifts to environmental challenges, the international community is constantly reacting to and shaping the future. In recent weeks, tensions have escalated in several key regions, pushing diplomacy to the forefront of international affairs. Meanwhile, climate concerns remain pressing as heatwaves and floods impact millions globally. Major economies are navigating inflation, technological transformation, and shifting alliances, prompting governments to rethink trade and defense strategies...
+  </p>
+
+  <p class="text-gray-700 leading-8 text-justify mt-4">
+    In Europe, debates around migration, energy policy, and security are intensifying. The European Union has launched new initiatives to strengthen border management while also advocating for renewable energy adoption to reduce dependence on fossil fuels. In Asia, economic powerhouses such as China, India, and Japan are responding to both internal pressures and global expectations. Technological innovation is booming, especially in artificial intelligence, with regional cooperation expanding in sectors like digital economy and cybersecurity.
+  </p>
+
+  <p class="text-gray-700 leading-8 text-justify mt-4">
+    Across Africa, nations are balancing development goals with the need for political stability. Elections in several countries have drawn international attention, highlighting the progress and challenges facing democratic systems. At the same time, African countries are working to amplify their voices on the global stage, especially in climate negotiations and trade discussions. Latin America is witnessing dynamic political shifts, with new leaderships taking bold stances on issues like corruption, inequality, and environmental justice.
+  </p>
+
+  <p class="text-gray-700 leading-8 text-justify mt-4">
+    The United States continues to play a pivotal role in international affairs, with its foreign policy focusing on reinforcing alliances and countering global threats. As elections approach, domestic debates are expected to shape global perceptions of American leadership. In the Middle East, efforts at de-escalation and normalization of diplomatic ties are ongoing, even as some regions remain unstable. The global economy is in a state of cautious recovery, with inflation stabilizing in some areas, yet remaining a concern elsewhere. Digital currencies, AI governance, and tech regulations are now part of major global forums.
+  </p>
+
+  <p class="text-gray-700 leading-8 text-justify mt-4">
+    As the world grapples with interconnected challenges, the importance of accurate reporting, international collaboration, and a shared commitment to peace and sustainability cannot be overstated. From health crises to humanitarian emergencies, global solidarity is being tested—and strengthened—by every new headline.
+  </p>
+</div>
+
 
   <!-- JavaScript -->
   <script>

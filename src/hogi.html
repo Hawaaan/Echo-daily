@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sidebar Settings</title>
+  <script>
+    function toggleMenu(id) {
+      const element = document.getElementById(id);
+      element.classList.toggle("hidden");
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex h-screen bg-gray-100">
+
+  <!-- Sidebar -->
+  <div class="w-64 bg-white shadow-lg p-4">
+    <h2 class="text-xl font-bold mb-4">Sidebar</h2>
+    
+    <!-- Settings Item -->
+    <button onclick="toggleMenu('settingsMenu')" class="w-full flex justify-between items-center px-4 py-2 text-left hover:bg-gray-100 rounded">
+      <span>⚙️ Settings</span>
+      <svg class="w-4 h-4 transform transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+      </svg>
+    </button>
+    
+    <!-- Dropdown under Settings -->
+    <div id="settingsMenu" class="ml-6 mt-2 space-y-2 hidden">
+      <a href="#" class="block px-2 py-1 hover:bg-gray-200 rounded">🔆 Display</a>
+      <a href="#" class="block px-2 py-1 hover:bg-gray-200 rounded">🌗 Brightness</a>
+      <a href="#" class="block px-2 py-1 hover:bg-gray-200 rounded">🔔 Notifications</a>
+    </div>
+
+    <!-- Another item -->
+    <a href="#" class="block mt-4 px-4 py-2 hover:bg-gray-100 rounded">📁 Files</a>
+  </div>
+
+  <!-- Main Content -->
+  <div class="flex-1 p-6">
+    <h1 class="text-2xl font-bold">Main Content Area</h1>
+    <p class="mt-4 text-gray-600">Here you can show whatever is selected from the sidebar.</p>
+  </div>
+
+</body>
+</html>
