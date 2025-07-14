@@ -16,7 +16,12 @@
 <!-- Navbar -->
   <header class="bg-blue-600 dark:bg-gray-800 text-white p-4 flex justify-between items-center shadow-md">
     <h1 class="text-xl font-bold">Echo Daily</h1>
-
+     <div class="flex items-center gap-4">
+      <!-- Search Box -->
+      <div class="hidden md:block">
+        <input type="text" placeholder="Search news..."
+               class="px-3 py-1 rounded-md text-gray-800 focus:outline-none text-sm w-40 lg:w-64" />
+      </div>
 
       <!-- Dark Mode Toggle Icon -->
       <button id="darkToggle" class="text-white focus:outline-none">
