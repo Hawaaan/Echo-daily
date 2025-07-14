@@ -57,7 +57,7 @@
 
     <!-- Sidebar -->
     <aside id="sidebar" class="bg-white dark:bg-gray-800 w-64 space-y-6 py-7 px-2 
-      absolute top-16 inset-y-0 left-0 transform -translate-x-full 
+      absolute top-16  inset-y-0 left-0 transform -translate-x-full 
       md:relative md:top-0 md:translate-x-0 transition duration-200 ease-in-out 
       shadow-md dark:text-white z-50">
       <nav>
@@ -155,6 +155,13 @@
 
     // Feather Icons
     feather.replace();
+  </script>
+  <script>
+    function showContent(contentId) {
+      const allContents = document.querySelectorAll(".content-section");
+      allContents.forEach(section => section.classList.add("hidden"));
+      document.getElementById(contentId).classList.remove("hidden");
+    }
   </script>
 </body>
 </html>
