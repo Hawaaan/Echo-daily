@@ -235,6 +235,13 @@ Germany oo ah jawi mala-awaalka maalgashadayaasha dhaqaale ee Juli ayaa kordhay,
     menuBtn.addEventListener('click', () => {
       sidebar.classList.toggle('-translate-x-full');
     });
+sidebar.addEventListener('click', (e) => {
+  // haddii gujintu ku dhacdo link‑giisa ama
+  // wax kale oo aad rabto (halkan closest('a') ayaa ku filan)
+  if (e.target.closest('a, button, li')) {
+    sidebar.classList.add('-translate-x-full');  // qari
+  }
+});
 
     // Dark mode toggle
     darkToggle.addEventListener('click', () => {
@@ -247,6 +254,7 @@ Germany oo ah jawi mala-awaalka maalgashadayaasha dhaqaale ee Juli ayaa kordhay,
     // Feather Icons
     feather.replace();
   </script>
+  <!-- Waa Meesha Content Lagu soo muujinaye -->
   <script>
     function showContent(contentId) {
       const allContents = document.querySelectorAll(".content-section");
