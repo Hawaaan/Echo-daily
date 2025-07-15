@@ -31,7 +31,7 @@
       </button>
 
       <!-- Notifications Icon -->
-      <button class="text-white focus:outline-none relative bg-gray-200 bg-opacity-10 py-1 px-0.5 rounded-e-md">
+      <button class="text-white focus:outline-none relative bg-gray-200 bg-opacity-10 py-1 px-0.5 rounded-e-md hidden md:block">
         <i data-feather="bell"></i>
         <span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs w-4 h-4 rounded-full flex items-center justify-center">3</span>
       </button>
@@ -39,7 +39,7 @@
       <!-- Profile Avatar -->
       <img src="./images/logo.jfif"
            alt="Avatar"
-           class="w-9 h-9 rounded-fitt border-2 border-white dark:border-gray-600 object-contain" />
+           class="w-9 h-9 rounded-fitt border-2 border-white dark:border-gray-600 object-contain hidden md:block" />
 
       <!-- Mobile Sidebar Toggle -->
       <button id="menu-btn" class="md:hidden block focus:outline-none py-1 px-0.5 border">
@@ -85,20 +85,51 @@
       </nav>
     </aside>
 
+    <!-- home content -->
+     <section class="content-section  flex-1 ml-2" id="home">
+      <h2 class="text-2xl font-semibold mb-4 text-center">Welcome to Echo Daily</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-4">
+        <div class="bg-white dark:bg-gray-700 rounded-lg shadow p-4">
+          <h3 class="text-lg font-bold text-center">Description Our Page)</h3> <br>
+          <p class=""><strong>Echo Daily</strong> waa Website soo gudbisa wararka ugu muhiimsan dhinac walba — siyaasadda, teknolojiyadda, ciyaaraha, fanka, caafimaadka, iyo wararka caalamka. Ujeeddadeennu waa in aan kuu keeno xog sax ah, degdeg ah, oo si sahlan loo fahmi karo, adigoo jooga hal meel.</p>
+        </div>
+           <div class="bg-white dark:bg-gray-700 rounded-lg shadow p-4">
+          <h3 class="text-lg font-bold text-center">Himiladeena (Our Vision)</h3> <br>
+          <p>Inaan noqono ilo warar oo hogaamineed, si dhab ah, waqtigeeda iyo dhexdhexaadnimo leh u gudbiya, si uu bulshada caalamka u wargeliyo, u baro, uguna dhiirrigeliyo.</p>
+        </div>
+           <div class="bg-white dark:bg-gray-700 rounded-lg shadow p-4">
+          <h3 class="text-lg font-bold text-center">Ujeedadeena (Our Mission)</h3> <br>
+          <p>Ujeedadeenu waa inaan soo gudbino warar la isku halleyn karo oo ka imanaya daafaha dunida — oo ay ka mid yihiin siyaasadda, tignoolajiyada, caafimaadka, dhaqaalaha, deegaanka, iyo dhaqanka — annagoo adeegsanayna madal dijitaal ah oo casri ah, kuna dhisan hufnaan, daahfurnaan, iyo xirfad suxufiyenimo oo heer sare ah.</p>
+        </div>
+       
+    </section>
+    <!-- world news contents -->
     <section class="content-section hidden flex-1 ml-2" id="news">
-      <h2 class="text-2xl font-semibold mb-4">Welcome to Echo Daily 🌍</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <h2 class="text-2xl font-semibold mb-4 text-center">Welcome to World News</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
         <div class="bg-white dark:bg-gray-700 rounded-lg shadow p-4">
-          <h3 class="text-lg font-bold">World News</h3>
-          <p>Latest updates from around the world including politics, health, and major headlines.</p>
+          <h3 class="text-lg font-bold">Caalamka – Suuqa iyo Cunaqabataynta</h3>
+          <p>Madaxweynaha Mareykanka Donald Trump wuxuu ku dhawaaqay canshuur celin cusub oo 30% ah oo lagu soo rogi doono alaabaha ka yimaada EU iyo Mexico laga bilaabo 1‑da August, taasoo saamayn yar ku yeelatay suuqyada Yurub, in kasta oo bonds-ka Jarmalka iyo Japan ay yara dhac sameeyeen .
+
+<br> <br> Reuters-dii ugu danbeysay ayaa tilmaantay in dhaqaalaha Jarmalku midhaan wanaagsanaa uu muujiyey dhiirigelin, iyadoo cabsi laga muujiyey haddii heshiis la’aan u dhaxeyso Mareykanka iyo EU .</p>
         </div>
         <div class="bg-white dark:bg-gray-700 rounded-lg shadow p-4">
-          <h3 class="text-lg font-bold">Tech Trends</h3>
-          <p>Explore new innovations in AI, smartphones, and startup ecosystem.</p>
+          <h3 class="text-lg font-bold">Madasha G20 – Dhaqaale iyo Siyaasad</h3>
+          <p>Wasiirka Maaliyadda Mareykanka Scott Bessent ayaa ka maqnaa shirkii G20 ee Durban, taasoo dhalisay walaac ku saabsan waxtarka kooxda 
+.
+<br> <br>Trump waxa uu wargeliyey inuu u baahan yahay canshuur celin noocyo badan leh (autos 25%, darajooyin kale 50–200%), taasina waxay culays ku riday shirkado iyo suuqyo badan .</p>
         </div>
         <div class="bg-white dark:bg-gray-700 rounded-lg shadow p-4">
-          <h3 class="text-lg font-bold">Sports Highlights</h3>
-          <p>Top scores, match summaries, and upcoming sports events.</p>
+          <h3 class="text-lg font-bold"> Suuqyada & Maalgashadayaasha</h3>
+          <p>Wall Street iyo Nasdaq waxay gaareen rikoodho cusub, iyadoo Bitcoin uu dhigay qiimo ka sareeya $120 ,000 
+<br> <br>
+Miisaaniyadda ganacsiga ayaa deggan, inkastoo culeyska canshuuraha Mareykanka ee EU/Mexico uu weli suuqyada khiyaali ka marayo .</p>
+        </div>
+                <div class="bg-white dark:bg-gray-700 rounded-lg shadow p-4">
+          <h3 class="text-lg font-bold"> Dhaqaalaha Adduunka – Shiinaha & Deegaanka</h3>
+          <p>Soo dejinta Shiinaha ee saliidda, LNG, iyo macdanta ayaa muujinaysa is bedel qiimaha ku dhisan; saliiduna waxay muujiyeen isbedel yar, halka LNG iyo macdanta ay hoos u dhac ku yimaadeen . <br> <br>
+
+Germany oo ah jawi mala-awaalka maalgashadayaasha dhaqaale ee Juli ayaa kordhay, lagana digay in fursadahan ay lumaaan haddii heshiis EU-Mareykanka uusan samaysmin .</p>
         </div>
     </section>
         <section class="content-section hidden flex-1 ml-2" id="Brightness">
