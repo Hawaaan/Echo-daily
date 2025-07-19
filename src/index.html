@@ -34,7 +34,7 @@
 </head>
 <body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white transition-all text-xs">
 
-<div class="flex min-h-screen">
+<div class="flex min-h-screen ">
   <!-- Sidebar (Desktop) -->
   <aside id="desktopSidebar" class="sidebar-expanded transition-all duration-300 bg-white dark:bg-gray-800 p-4 flex-col justify-between hidden md:flex">
     <div>
@@ -305,11 +305,73 @@
   <div id="departmentsContent" class="content-section hidden">
     <h1 class="text-2xl font-bold mb-4">Departments</h1>
     <p>Information about all departments in your company.</p>
+    <div class="max-w-4xl mx-auto mt-10 p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-md">
+  <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-6">Departments</h2>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+    <div class="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg shadow hover:shadow-lg transition">
+      <h3 class="text-lg font-semibold text-gray-800 dark:text-white">Human Resources</h3>
+      <p class="text-sm text-gray-600 dark:text-gray-300">Employee management and hiring.</p>
+    </div>
+
+    <div class="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg shadow hover:shadow-lg transition">
+      <h3 class="text-lg font-semibold text-gray-800 dark:text-white">Finance</h3>
+      <p class="text-sm text-gray-600 dark:text-gray-300">Handles budgeting and payroll.</p>
+    </div>
+
+    <div class="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg shadow hover:shadow-lg transition">
+      <h3 class="text-lg font-semibold text-gray-800 dark:text-white">IT Support</h3>
+      <p class="text-sm text-gray-600 dark:text-gray-300">Manages software and hardware.</p>
+    </div>
+
+    <div class="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg shadow hover:shadow-lg transition">
+      <h3 class="text-lg font-semibold text-gray-800 dark:text-white">Sales</h3>
+      <p class="text-sm text-gray-600 dark:text-gray-300">Responsible for client acquisition.</p>
+    </div>
+
+    <div class="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg shadow hover:shadow-lg transition">
+      <h3 class="text-lg font-semibold text-gray-800 dark:text-white">Marketing</h3>
+      <p class="text-sm text-gray-600 dark:text-gray-300">Promotes products and services.</p>
+    </div>
+
+    <div class="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg shadow hover:shadow-lg transition">
+      <h3 class="text-lg font-semibold text-gray-800 dark:text-white">Research & Development</h3>
+      <p class="text-sm text-gray-600 dark:text-gray-300">Innovates new business ideas.</p>
+    </div>
+  </div>
+</div>
+
   </div>
 
   <div id="attendanceContent" class="content-section hidden">
-    <h1 class="text-2xl font-bold mb-4">Attendance</h1>
-    <p>Attendance tracking details appear here.</p>
+    <div class="max-w-md mx-auto mt-10 p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-lg">
+  <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">Attendance Check</h2>
+
+  <form>
+    <div class="mb-4">
+      <label for="employee" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Select Employee</label>
+      <select id="employee" class="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-800 dark:text-white">
+        <option>Ahmed Ali</option>
+        <option>Fadumo Hassan</option>
+        <option>Yusuf Mohamed</option>
+      </select>
+    </div>
+
+    <div class="mb-4">
+      <label for="date" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Date</label>
+      <input type="date" id="date" class="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-800 dark:text-white">
+    </div>
+
+    <div class="mb-4">
+      <label class="inline-flex items-center">
+        <input type="checkbox" class="form-checkbox h-5 w-5 text-green-600">
+        <span class="ml-2 text-gray-700 dark:text-gray-300">Present</span>
+      </label>
+    </div>
+
+    <button type="submit" class="w-full bg-green-600 text-white py-2 px-4 rounded-md hover:bg-green-700 transition">Submit</button>
+  </form>
+</div>
   </div>
 </main>
 <!-- JS -->
