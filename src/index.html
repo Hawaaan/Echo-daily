@@ -81,34 +81,44 @@
     </div>
   </aside>
   <!-- stop -->
-  <!-- Layout -->
-  <div class="flex">
+   <!-- Sidebar (Mobile) -->
+  <div id="mobileSidebar" class="fixed top-0 left-0 w-64 h-full bg-white dark:bg-gray-800 shadow-lg transform -translate-x-full transition-transform duration-300 z-50 md:hidden p-6 flex flex-col justify-between">
+    <div>
+      <h2 class="text-2xl font-bold text-purple-600 mb-6">echo-daily</h2>
+      <nav class="space-y-2">
+        <a href="#" onclick="showContent('dashboardContent')" class="flex items-center gap-2 px-3 py-2 hover:bg-blue-100 dark:hover:bg-gray-700 rounded">
+          <i data-feather="home" class="w-5 h-5"></i>
+          Dashboard
+        </a>
+        <a href="#" onclick="showContent('reportsContent')" class="flex items-center gap-2 px-3 py-2 hover:bg-blue-100 dark:hover:bg-gray-700 rounded">
+          <i data-feather="bar-chart-2" class="w-5 h-5"></i>
+          Reports
+        </a>
+                <button onclick="showContent('hrmContent')" id="hrmToggle" class="w-full flex items-center justify-between p-2 rounded hover:bg-blue-100 dark:hover:bg-gray-700">
+      <div class="flex items-center gap-2">
+        <i data-feather="users" class="w-5 h-5"></i>
+        <span class="link-text">HRM</span>
+      </div>
+      <i data-feather="chevron-down" class="w-4 h-4 ml-auto"></i>
+    </button>
+        <div id="hrmMenu" class="ml-8 mt-2 space-y-2 ">
+<a href="#" onclick="showContent('employeesContent')" class="block text-sm text-gray-600 dark:text-gray-300 hover:underline link-text">Employees</a>
+<a href="#" onclick="showContent('departmentsContent')" class="block text-sm text-gray-600 dark:text-gray-300 hover:underline link-text">Departments</a>
+<a href="#" onclick="showContent('attendanceContent')" class="block text-sm text-gray-600 dark:text-gray-300 hover:underline link-text">Attendance</a>
 
-    <!-- Sidebar -->
-    <aside id="sidebar" class="bg-white dark:bg-gray-800 w-64 space-y- py-11 px-2 
-      absolute top-16  inset-y-0 left-0 transform -translate-x-full 
-      md:relative md:top-0 md:translate-x-0 transition duration-200 ease-in-out 
-      shadow-md dark:text-white z-50">
-      <nav>
-       <button onclick="showContent('news')" class="flex items-center gap-2 py-2.5 px-4 rounded hover:bg-blue-100 dark:hover:bg-gray-700 font-semibold">
-          <i data-feather="globe"></i> World News
-       </button>
-       <button onclick="showContent('Tech-news')" class="flex items-center gap-2 py-2.5 px-4 rounded hover:bg-blue-100 dark:hover:bg-gray-700 font-semibold">
-          <i data-feather="cpu"></i> Tech News
-       </button>
-       <button onclick="showContent('Sports')" class="flex items-center gap-2 py-2.5 px-4 rounded hover:bg-blue-100 dark:hover:bg-gray-700 font-semibold">
-          <i data-feather="activity"></i> sports
-       </button>
-       <button onclick="showContent('news')" class="flex items-center gap-2 py-2.5 px-4 rounded hover:bg-blue-100 dark:hover:bg-gray-700 font-semibold">
-          <i data-feather="cloud"></i> Weather
-       </button>
-       <button onclick="showContent('Business')" class="flex items-center gap-2 py-2.5 px-4 rounded hover:bg-blue-100 dark:hover:bg-gray-700 font-semibold">
-          <i data-feather="dollar-sign"></i> Business
-       </button>
-       <button onclick="showContent('cast')" class="flex items-center gap-2 py-2.5 px-4 rounded hover:bg-blue-100 dark:hover:bg-gray-700 font-semibold">
-          <i data-feather="cast"></i> Cast
+    </div>
+
       </nav>
-    </aside>
+    </div>
+    <div class="mt-6">
+      <button class="flex items-center gap-2 text-red-500 hover:text-red-700 transition">
+        <i data-feather="log-out" class="w-5 h-5"></i>
+        Logout
+      </button>
+    </div>
+  </div>
+  <!-- stop -->
+
 
     <!-- home content -->
      <section class="content-section  flex-1 ml-2" id="home">
