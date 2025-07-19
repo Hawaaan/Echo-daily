@@ -193,6 +193,128 @@
 </header>
 </div>
 <!-- stop -->
+  <!-- Dashboard Content -->
+<main class="p-6">
+  <div id="dashboardContent" class="content-section">
+    <h1 class="text-2xl font-bold mb-4">Dashboard</h1>
+    <p>Welcome to your HRM dashboard. Here’s a summary of everything.</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mt-4">
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow ">
+          <p class="text-sm text-gray-500 dark:text-gray-300">Total Employees</p>
+          <h2 class="text-3xl font-bold">12,116</h2>
+          <p class="text-green-500 text-sm mt-1">↑ 2.5% Increased</p>
+        </div>
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow">
+          <p class="text-sm text-gray-500 dark:text-gray-300">Total Job Applied</p>
+          <h2 class="text-3xl font-bold">15,784</h2>
+          <p class="text-red-500 text-sm mt-1">↓ 1.5% Decreased</p>
+        </div>
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow">
+          <p class="text-sm text-gray-500 dark:text-gray-300">Total Compensation</p>
+          <h2 class="text-3xl font-bold">$56,784</h2>
+          <p class="text-green-500 text-sm mt-1">↑ 6.0% Increased</p>
+        </div>
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow">
+          <p class="text-sm text-gray-500 dark:text-gray-300">Annual Compensation</p>
+          <h2 class="text-3xl font-bold">$6.8k</h2>
+          <p class="text-green-500 text-sm mt-1">↑ 6.0% Increased</p>
+        </div>
+      </div>
+  </div>
+
+  <div id="reportsContent" class="content-section hidden">
+    <h1 class="text-2xl font-bold mb-4">Reports</h1>
+    <p>Reports section: charts, summaries, and graphs will appear last four month.</p>
+      <div class="bg-white dark:bg-gray-800 shadow-lg rounded-xl p-6 w-full max-w-xl">
+    <h2 class="text-xl font-semibold mb-4">My Sales Chart</h2>
+    <canvas id="myChart" class="w-full h-64"></canvas>
+  </div>
+  </div>
+    <div id="hrmContent" class="content-section hidden dark:text-gray-300"">
+    <h1 class="text-2xl font-bold mb-4">HRM</h1>
+      <div class="max-w-3xl mx-auto bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden">
+    <div class="flex items-center p-6 border-b">
+      <img class="w-20 h-20 rounded-full object-cover mr-4" src="#" alt="Profile">
+      <div>
+        <h2 class="text-xl font-bold">Ali Mohamed</h2>
+        <p class="text-sm bg-white dark:bg-gray-800 mb-4">Senior Software Engineer</p>
+        <span class="text-xs text-green-700 bg-green-100 px-2 py-1 rounded-full ">Active</span>
+      </div>
+    </div>
+
+    <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-4 text-sm bg-white dark:bg-gray-800">
+      <div>
+        <p class="font-medium">Email:</p>
+        <p>ali.mohamed@example.com</p>
+      </div>
+      <div>
+        <p class="font-medium">Phone:</p>
+        <p>+252 612 345678</p>
+      </div>
+      <div>
+        <p class="font-medium">Department:</p>
+        <p>Engineering</p>
+      </div>
+      <div>
+        <p class="font-medium">Joining Date:</p>
+        <p>12 Jan 2021</p>
+      </div>
+    </div>
+
+    <div class="flex justify-end items-center gap-3 p-4 border-t">
+      <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Edit</button>
+      <button class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Delete</button>
+    </div>
+  </div>
+  </div>
+
+  <div id="employeesContent" class="content-section hidden">
+
+  <div class="max-w-3xl mx-auto shadow-md rounded-xl p-6 bg-white dark:bg-gray-800">
+    <h2 class="text-2xl font-bold mb-4">Employee List</h2>
+
+    <!-- Employee 1 -->
+    <div class="flex items-center justify-between p-4 border-b">
+      <div>
+        <h3 class="text-lg font-semibold">Ali Mohamed</h3>
+        <p class="text-sm  text-gray-500 dark:text-gray-300">Frontend Developer</p>
+      </div>
+      <span class="text-sm bg-green-100 text-green-600 px-2 py-1 rounded-full">Active</span>
+    </div>
+
+    <!-- Employee 2 -->
+    <div class="flex items-center justify-between p-4 border-b">
+      <div>
+        <h3 class="text-lg font-semibold">Fatima Yusuf</h3>
+        <p class="text-sm text-gray-500">UI/UX Designer</p>
+      </div>
+      <span class="text-sm bg-yellow-100 text-yellow-600 px-2 py-1 rounded-full">On Leave</span>
+    </div>
+
+    <!-- Employee 3 -->
+    <div class="flex items-center justify-between p-4">
+      <div>
+        <h3 class="text-lg font-semibold">Abdullahi Ahmed</h3>
+        <p class="text-sm text-gray-500">Backend Developer</p>
+      </div>
+      <span class="text-sm bg-red-100 text-red-600 px-2 py-1 rounded-full">Inactive</span>
+    </div>
+  </div>
+    <h1 class="text-2xl font-bold mb-4">Employees</h1>
+    <p>List of all employees and their details.</p>
+  </div>
+
+  <div id="departmentsContent" class="content-section hidden">
+    <h1 class="text-2xl font-bold mb-4">Departments</h1>
+    <p>Information about all departments in your company.</p>
+  </div>
+
+  <div id="attendanceContent" class="content-section hidden">
+    <h1 class="text-2xl font-bold mb-4">Attendance</h1>
+    <p>Attendance tracking details appear here.</p>
+  </div>
+</main>
+<!-- stop -->
   <!-- JavaScript -->
   <script>
     const menuBtn = document.getElementById('menu-btn');
