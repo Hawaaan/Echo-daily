@@ -80,8 +80,8 @@
       </button>
     </div>
   </aside>
-  <!-- stop -->
-   <!-- Sidebar (Mobile) -->
+
+  <!-- Sidebar (Mobile) -->
   <div id="mobileSidebar" class="fixed top-0 left-0 w-64 h-full bg-white dark:bg-gray-800 shadow-lg transform -translate-x-full transition-transform duration-300 z-50 md:hidden p-6 flex flex-col justify-between">
     <div>
       <h2 class="text-2xl font-bold text-purple-600 mb-6">echo-daily</h2>
@@ -117,7 +117,6 @@
       </button>
     </div>
   </div>
-  <!-- stop -->
 
   <!-- Main Content -->
   <div class="flex-1 flex flex-col">
@@ -191,9 +190,8 @@
     </button>
   </div>
 </header>
-</div>
-<!-- stop -->
-  <!-- Dashboard Content -->
+
+    <!-- Dashboard Content -->
 <main class="p-6">
   <div id="dashboardContent" class="content-section">
     <h1 class="text-2xl font-bold mb-4">Dashboard</h1>
@@ -314,45 +312,128 @@
     <p>Attendance tracking details appear here.</p>
   </div>
 </main>
-<!-- stop -->
-  <!-- JavaScript -->
-  <script>
-    const menuBtn = document.getElementById('menu-btn');
-    const sidebar = document.getElementById('sidebar');
-    const darkToggle = document.getElementById('darkToggle');
-    const htmlElement = document.documentElement;
-    const darkIcon = document.getElementById('darkIcon');
-
-    // Sidebar toggle
-    menuBtn.addEventListener('click', () => {
-      sidebar.classList.toggle('-translate-x-full');
+<!-- JS -->
+<!-- js contents yada -->
+ <script>
+  function showContent(contentId) {
+    const allSections = document.querySelectorAll('.content-section');
+    allSections.forEach(section => {
+      section.classList.add('hidden');
     });
-sidebar.addEventListener('click', (e) => {
-  // haddii gujintu ku dhacdo link‑giisa ama
-  // wax kale oo aad rabto (halkan closest('a') ayaa ku filan)
-  if (e.target.closest('a, button, li')) {
-    sidebar.classList.add('-translate-x-full');  // qari
+
+    const selected = document.getElementById(contentId);
+    if (selected) {
+      selected.classList.remove('hidden');
+    }
   }
+</script>
+
+
+<script>
+  feather.replace();
+
+  const themeToggle = document.getElementById('themeToggle');
+  const themeIcon = document.getElementById('themeIcon');
+  const mobileToggle = document.getElementById('mobileMenuToggle');
+  const mobileSidebar = document.getElementById('mobileSidebar');
+  const desktopSidebar = document.getElementById('desktopSidebar');
+  const desktopToggle = document.getElementById('desktopMenuToggle');
+
+  let isDark = document.documentElement.classList.contains('dark');
+
+  function updateThemeIcon() {
+    themeIcon.setAttribute('data-feather', isDark ? 'sun' : 'moon');
+    feather.replace();
+  }
+
+  updateThemeIcon();
+
+  themeToggle.addEventListener('click', () => {
+    document.documentElement.classList.toggle('dark');
+    isDark = !isDark;
+    updateThemeIcon();
+  });
+
+  mobileToggle.addEventListener('click', () => {
+    mobileSidebar.classList.toggle('-translate-x-full');
+  });
+
+  desktopToggle.addEventListener('click', () => {
+    if (desktopSidebar.classList.contains('sidebar-expanded')) {
+      desktopSidebar.classList.remove('sidebar-expanded');
+      desktopSidebar.classList.add('sidebar-collapsed');
+      document.querySelectorAll('.link-text').forEach(el => el.classList.add('hidden'));
+    } else {
+      desktopSidebar.classList.remove('sidebar-collapsed');
+      desktopSidebar.classList.add('sidebar-expanded');
+      document.querySelectorAll('.link-text').forEach(el => el.classList.remove('hidden'));
+    }
+  });
+</script>
+
+<script>
+  // Close mobile sidebar on link click
+  document.querySelectorAll('#mobileSidebar a, #mobileSidebar button').forEach(el => {
+    el.addEventListener('click', () => {
+      const mobileSidebar = document.getElementById('mobileSidebar');
+      mobileSidebar.classList.add('-translate-x-full');
+    });
+  });
+</script>
+
+<script>
+
+  // Fullscreen toggle
+const fullscreenToggle = document.getElementById('fullscreenToggle');
+const fullscreenIcon = document.getElementById('fullscreenIcon');
+
+fullscreenToggle.addEventListener('click', () => {
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen();
+    fullscreenIcon.setAttribute('data-feather', 'minimize');
+  } else {
+    document.exitFullscreen();
+    fullscreenIcon.setAttribute('data-feather', 'maximize');
+  }
+  feather.replace();
 });
 
-    // Dark mode toggle
-    darkToggle.addEventListener('click', () => {
-      htmlElement.classList.toggle('dark');
-      const isDark = htmlElement.classList.contains('dark');
-      darkIcon.setAttribute('data-feather', isDark ? 'sun' : 'moon');
-      feather.replace();
-    });
+</script>
+<!-- dropdown hrm -->
+<script>
+  const hrmToggle = document.getElementById('hrmToggle');
+const hrmMenu = document.getElementById('hrmMenu');
 
-    // Feather Icons
-    feather.replace();
+hrmToggle.addEventListener('click', () => {
+  hrmMenu.classList.toggle('hidden');
+});
+
+</script>
+<!-- chart code java -->
+   <script>
+    const ctx = document.getElementById('myChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['January', 'February', 'March', 'April'],
+        datasets: [{
+          label: 'Sales',
+          data: [65, 59, 80, 81],
+          backgroundColor: 'rgba(59, 130, 246, 0.5)', // blue-500
+          borderColor: 'rgba(59, 130, 246, 1)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
   </script>
-  <!-- Waa Meesha Content Lagu soo muujinaye -->
-  <script>
-    function showContent(contentId) {
-      const allContents = document.querySelectorAll(".content-section");
-      allContents.forEach(section => section.classList.add("hidden"));
-      document.getElementById(contentId).classList.remove("hidden");
-    }
-  </script>
+
 </body>
 </html>
