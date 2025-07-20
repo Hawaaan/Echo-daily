@@ -97,14 +97,14 @@
                 <button onclick="showContent('hrmContent')" id="hrmToggle" class="w-full flex items-center justify-between p-2 rounded hover:bg-blue-100 dark:hover:bg-gray-700">
       <div class="flex items-center gap-2">
         <i data-feather="users" class="w-5 h-5"></i>
-        <span class="link-text">HRM</span>
+        <span class="">HRM</span>
       </div>
       <i data-feather="chevron-down" class="w-4 h-4 ml-auto"></i>
     </button>
         <div id="hrmMenu" class="ml-8 mt-2 space-y-2 ">
-<a href="#" onclick="showContent('employeesContent')" class="block text-sm text-gray-600 dark:text-gray-300 hover:underline link-text">Employees</a>
-<a href="#" onclick="showContent('departmentsContent')" class="block text-sm text-gray-600 dark:text-gray-300 hover:underline link-text">Departments</a>
-<a href="#" onclick="showContent('attendanceContent')" class="block text-sm text-gray-600 dark:text-gray-300 hover:underline link-text">Attendance</a>
+<a href="#" onclick="showContent('employeesContent')" class="block text-sm text-gray-600 dark:text-gray-300 hover:underline ">Employees</a>
+<a href="#" onclick="showContent('departmentsContent')" class="block text-sm text-gray-600 dark:text-gray-300 hover:underline ">Departments</a>
+<a href="#" onclick="showContent('attendanceContent')" class="block text-sm text-gray-600 dark:text-gray-300 hover:underline ">Attendance</a>
 
     </div>
 
@@ -131,7 +131,7 @@
     </button>
 
     <!-- Logo -->
-    <div class="flex items-center gap-2">
+    <div class="flex items-center gap-2 ">
             <button id="desktopMenuToggle" class=" hidden md:block text-gray-600 dark:text-gray-300 hover:text-blue-500">
         <i data-feather="menu" class="w-5 h-5"></i>
       </button>
@@ -195,7 +195,7 @@
 <main class="p-6">
   <div id="dashboardContent" class="content-section">
     <h1 class="text-2xl font-bold mb-4">Dashboard</h1>
-    <p>Welcome to your HRM dashboard. Here’s a summary of everything.</p>
+    <p>Welcome to your dashboard. Here’s</p>
     <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mt-4">
         <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow ">
           <p class="text-sm text-gray-500 dark:text-gray-300">Total Employees</p>
@@ -222,9 +222,9 @@
 
   <div id="reportsContent" class="content-section hidden">
     <h1 class="text-2xl font-bold mb-4">Reports</h1>
-    <p>Reports section: charts, summaries, and graphs will appear last four month.</p>
+    <p>Reports section: charts, summaries, and graphs will appear last four month reports of sales.</p>
       <div class="bg-white dark:bg-gray-800 shadow-lg rounded-xl p-6 w-full max-w-xl">
-    <h2 class="text-xl font-semibold mb-4">My Sales Chart</h2>
+    <h2 class="text-xl font-semibold mb-4">My reports Chart</h2>
     <canvas id="myChart" class="w-full h-64"></canvas>
   </div>
   </div>
@@ -232,10 +232,10 @@
     <h1 class="text-2xl font-bold mb-4">HRM</h1>
       <div class="max-w-3xl mx-auto bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden">
     <div class="flex items-center p-6 border-b">
-      <img class="w-20 h-20 rounded-full object-cover mr-4" src="#" alt="Profile">
+      <img class="w-20 h-20 rounded-full object-cover mr-4" src="./images/logo.jfif" alt="Profile">
       <div>
-        <h2 class="text-xl font-bold">Ali Mohamed</h2>
-        <p class="text-sm bg-white dark:bg-gray-800 mb-4">Senior Software Engineer</p>
+        <h2 class="text-xl font-bold">Abdisalan</h2>
+        <p class="text-sm bg-white dark:bg-gray-800 mb-4">Web Developer</p>
         <span class="text-xs text-green-700 bg-green-100 px-2 py-1 rounded-full ">Active</span>
       </div>
     </div>
@@ -243,19 +243,19 @@
     <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-4 text-sm bg-white dark:bg-gray-800">
       <div>
         <p class="font-medium">Email:</p>
-        <p>ali.mohamed@example.com</p>
+        <p>Abdisalan1221@gmail.com</p>
       </div>
       <div>
         <p class="font-medium">Phone:</p>
-        <p>+252 612 345678</p>
+        <p>+252612910193</p>
       </div>
       <div>
         <p class="font-medium">Department:</p>
-        <p>Engineering</p>
+        <p>IT</p>
       </div>
       <div>
         <p class="font-medium">Joining Date:</p>
-        <p>12 Jan 2021</p>
+        <p>29 may 2025</p>
       </div>
     </div>
 
@@ -274,7 +274,7 @@
     <!-- Employee 1 -->
     <div class="flex items-center justify-between p-4 border-b">
       <div>
-        <h3 class="text-lg font-semibold">Ali Mohamed</h3>
+        <h3 class="text-lg font-semibold">abdihamiid</h3>
         <p class="text-sm  text-gray-500 dark:text-gray-300">Frontend Developer</p>
       </div>
       <span class="text-sm bg-green-100 text-green-600 px-2 py-1 rounded-full">Active</span>
@@ -284,7 +284,7 @@
     <div class="flex items-center justify-between p-4 border-b">
       <div>
         <h3 class="text-lg font-semibold">Fatima Yusuf</h3>
-        <p class="text-sm text-gray-500">UI/UX Designer</p>
+        <p class="text-sm text-gray-500">Designer</p>
       </div>
       <span class="text-sm bg-yellow-100 text-yellow-600 px-2 py-1 rounded-full">On Leave</span>
     </div>
@@ -293,18 +293,16 @@
     <div class="flex items-center justify-between p-4">
       <div>
         <h3 class="text-lg font-semibold">Abdullahi Ahmed</h3>
-        <p class="text-sm text-gray-500">Backend Developer</p>
+        <p class="text-sm text-gray-500">Developer</p>
       </div>
       <span class="text-sm bg-red-100 text-red-600 px-2 py-1 rounded-full">Inactive</span>
     </div>
   </div>
-    <h1 class="text-2xl font-bold mb-4">Employees</h1>
-    <p>List of all employees and their details.</p>
   </div>
 
   <div id="departmentsContent" class="content-section hidden">
     <h1 class="text-2xl font-bold mb-4">Departments</h1>
-    <p>Information about all departments in your company.</p>
+    <p>Information about all departments</p>
     <div class="max-w-4xl mx-auto mt-10 p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-md">
   <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-6">Departments</h2>
 
@@ -499,3 +497,4 @@ hrmToggle.addEventListener('click', () => {
 
 </body>
 </html>
+
